@@ -58,17 +58,24 @@ function usageExample() {
   const works = <Example someProp="hello" />;
 
   // Doesn't work! You can't set injected properties.
-  const doesNotWork1 = <Example someProp="hello" injectedProp={...} anotherInjectedProp="world" />;
+  const doesNotWork1 = <Example 
+    someProp="hello" 
+    injectedProp={...} 
+    anotherInjectedProp="world" 
+  />;
 
   // Doesn't work! You must provide required properties.
   const doesNotWork2 = <Example />;
 
-  // Works! To use the actual component type in createRef, you should hoist the "class Example" definition out of the Inject call into the outer scope and rename it (see below).
+  // Works! To use the actual component type in createRef, you should hoist the 
+  // "class Example" definition out of the Inject call into the outer scope and 
+  // rename it (see below).
   const ref = React.createRef<any /* See below for typed createRef example */>();
   const works = <Example ref={ref} someProp="hello" />;
 }
 
-// An example of declaring a component class for use with createRef. You can optionally export ExampleInjected to use createRef in other files with it.
+// An example of declaring a component class for use with createRef. You can 
+// optionally export ExampleInjected to use createRef in other files with it.
 class ExampleInjected extends React.Component<ExampleProps, {}> {
   constructor(props: ExampleProps) {
     super(props);
