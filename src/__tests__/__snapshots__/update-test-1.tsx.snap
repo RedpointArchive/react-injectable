@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nested injected component updates correctly 1`] = `
+Array [
+  "foo1",
+  "bar1",
+  "baz",
+  "moo",
+]
+`;
+
+exports[`nested injected component updates correctly 2`] = `
+Array [
+  "foo2",
+  "bar1",
+  "baz",
+  "moo",
+]
+`;
+
+exports[`nested injected component updates correctly 3`] = `
+Array [
+  "foo2",
+  "bar2",
+  "baz",
+  "moo",
+]
+`;
+
+exports[`nested injected component updates correctly 4`] = `
+Array [
+  "foo1",
+  "bar2",
+  "baz",
+  "moo",
+]
+`;
+
+exports[`nested injected component updates correctly 5`] = `
+Array [
+  "foo2",
+  "bar1",
+  "baz",
+  "moo",
+]
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inject with multiple contexts injects correctly 1`] = `
+Array [
+  "foo2",
+  "bar2",
+  "baz",
+  "moo",
+]
+`;

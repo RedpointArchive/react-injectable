@@ -7,8 +7,12 @@
     "outDir": "./dist",
     "target": "es5",
     "jsx": "react",
-    "keyofStringsOnly": true
+    "keyofStringsOnly": true,
+    "esModuleInterop": true,
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*"
+  ]
 }

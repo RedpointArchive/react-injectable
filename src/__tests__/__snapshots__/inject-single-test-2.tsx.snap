@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`multiple InjectSingle calls inject correctly 1`] = `
+Array [
+  "foo2",
+  "bar2",
+  "baz",
+  "moo",
+]
+`;
