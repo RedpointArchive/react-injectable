@@ -55,7 +55,7 @@ let objectAssign: <T, U>(target: T, source: U) => T & U = function() {
  * // Using the component in code.
  * function usageExample() {
  *   return (
- *     <NavigationListener 
+ *     <Example 
  *       someProp="hello"
  *     />
  *   );
@@ -130,7 +130,7 @@ export function InjectSingle<K extends string, ContextType, ComponentProps exten
  * // Using the component in code.
  * function usageExample() {
  *   return (
- *     <NavigationListener 
+ *     <Example 
  *       someProp="hello"
  *     />
  *   );
