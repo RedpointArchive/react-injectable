@@ -1,4 +1,5 @@
 version: 0.0.{build}
+image: Ubuntu1804
 build_script:
 - sh: yarn version --new-version $APPVEYOR_BUILD_VERSION
 - sh: yarn build
