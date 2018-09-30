@@ -1,6 +1,6 @@
 {
   "name": "react-injectable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Inject React v16 context consumer values as properties into components, with TypeScript support!",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
