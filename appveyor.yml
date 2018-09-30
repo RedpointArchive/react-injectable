@@ -1,12 +1,6 @@
-environment:
-  nodejs_version: 8
-
-install:
-  - ps: Install-Product node $env:nodejs_version
-  - yarn
-
-build:
-  - yarn build
-
+version: 0.0.{build}
+build_script:
+- sh: yarn version --new-version $APPVEYOR_BUILD_VERSION
+- sh: yarn build
 test_script:
-  - yarn test
+- sh: yarn test
