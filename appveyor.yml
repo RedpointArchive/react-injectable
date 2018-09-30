@@ -5,6 +5,7 @@ environment:
     secure: CSzo9P7e9If8tU0CpcPKLr4wGqEvDvnsiJFw1+IoVdDUsKnPdXK+zan4xGV70d70
   GIT_AUTHOR_NAME: AppVeyor
   GIT_AUTHOR_EMAIL: build@redpoint.games
+stack: node 8
 install:
 - sh: node --version
 - sh: npm --version
