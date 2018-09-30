@@ -5,6 +5,8 @@ environment:
     secure: CSzo9P7e9If8tU0CpcPKLr4wGqEvDvnsiJFw1+IoVdDUsKnPdXK+zan4xGV70d70
   GIT_AUTHOR_NAME: AppVeyor
   GIT_AUTHOR_EMAIL: build@redpoint.games
+install:
+- sh: yarn
 build_script:
 - sh: git config --global user.email "build@redpoint.games"
 - sh: git config --global user.name "AppVeyor"
@@ -13,12 +15,12 @@ build_script:
 test_script:
 - sh: yarn test
 deploy_script:
-- pwsh: >-
-    if ($ENV:CONFIGURATION -eq "publish")
-    {
-      "//registry.npmjs.org/:_authToken=`$`{NPM_TOKEN`}" | Out-File (Join-Path $ENV:APPVEYOR_BUILD_FOLDER ".npmrc") -Encoding UTF8
-      iex "npm pack"
-      iex "npm publish"
-    }
-  on: 
+- sh: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > $APPVEYOR_BUILD_FOLDER/.npmrc
+  on:
+    branch: master
+- sh: npm pack
+  on:
+    branch: master
+- sh: npm publish
+  on:
     branch: master
