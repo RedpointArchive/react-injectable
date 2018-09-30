@@ -7,6 +7,9 @@ environment:
   GIT_AUTHOR_EMAIL: build@redpoint.games
 install:
 - sh: yarn
+before_build:
+- sh: node --version
+- sh: npm --version
 build_script:
 - sh: git config --global user.email "build@redpoint.games"
 - sh: git config --global user.name "AppVeyor"
