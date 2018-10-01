@@ -57,14 +57,14 @@ function usageExample() {
   // Works! You don't need to pass injected properties.
   const works = <Example someProp="hello" />;
 
-  // Doesn't work! You can't set injected properties.
+  // Compile error! You can't set injected properties.
   const doesNotWork1 = <Example 
     someProp="hello" 
     injectedProp={...} 
     anotherInjectedProp="world" 
   />;
 
-  // Doesn't work! You must provide required properties.
+  // Compile error! You must provide required properties.
   const doesNotWork2 = <Example />;
 
   // Works! To use the actual component type in createRef, you should hoist the 
